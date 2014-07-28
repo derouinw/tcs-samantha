@@ -19,4 +19,7 @@ while True:
 	if input > 8 or input < 0:
 		print "you can't pick a number lower than 0 or higher then 8"
 		continue
-	
+	if board[input] == "x" or board[input] == "o":
+		print "that spot is taken"
+		continue
+	board[input] = "x"
