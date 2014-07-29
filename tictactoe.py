@@ -23,3 +23,11 @@ while True:
 		print "that spot is taken"
 		continue
 	board[input] = "x"
+
+	while True:
+		random_guess = randint(0,8)
+		if board[random_guess] == "x" or board[random_guess] == "o":
+		
+
+
+
