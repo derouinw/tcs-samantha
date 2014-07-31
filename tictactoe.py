@@ -26,8 +26,9 @@ while True:
 
 	while True:
 		random_guess = randint(0,8)
-		if board[random_guess] == "x" or board[random_guess] == "o":
-		
-
+		if board[random_guess] != "x" and board[random_guess] != "o":
+			board[random_guess] = "o"	
+			break
+				
 
 
