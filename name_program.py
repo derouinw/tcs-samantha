@@ -19,7 +19,33 @@ def your_name_backwards(name):
 
 	print result
 
+def words_that_start_with_your_name(name):
+	"matches a word to your first,middle,and last name."
+	name_copy = name
+	names = []
+	space = name_copy.find(" ")
+	while (space != -1):
+		names.append(name_copy[:space])
+		name_copy = name_copy[space+1:]
+		space = name_copy.find(" ")
+	names.append(name_copy)
 
+	input = ""
+	while (input != "-1"):
+		add = ""
+		if len(names) > 1:
+			add = "s"
+		print"type in word that matches the first letter of your name" + add
+		input = raw_input()
+
+		nameCorrect = False
+		for word in names:
+			if input[0] == word[0]:
+				print "That's right it matches your name: " + word
+				nameCorrect = True
+
+		if not nameCorrect:
+			print "that's wrong try again"
 	
 print "What is your full name "
 name = raw_input()
