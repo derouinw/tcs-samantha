@@ -1,0 +1,145 @@
+[start]
+title: start
+opening_message: Hello, welcome to Will you or will you not conquer the emperor!
+	This is a game that has four main levels.
+	In order to complete this game, you will have to collect
+	magical powers from the dragon of the forbidden seas
+	and find the sword in the forbidden maze to defeat the
+	evil emperor holding your fellow Koreans captive.
+
+	If you're having trouble with the game, please type help
+	and it will give you tips on how to solve your problem.
+
+	You are near a village called Busan in the middle of a farmer's
+	valley. The farmer is yelling at you. You are surrounded by corn
+	and cherry blossoms.
+valid_input: run to the dock
+next_room: dock
+
+[dock]
+title: dock
+opening_message: You see a one-person boat floating in the water.
+valid_input: sail into the middle of the ocean
+next_room: ocean
+
+[ocean]
+title: ocean
+opening_message: You see telltale lines of a serpent's fins.
+	Your teeth chatter uncontrollably from fear.
+valid_input: investigate
+next_room: dragon
+
+[dragon]
+title: dragon
+opening_message: As you come closer the dragon senses you are near. 
+	Its mile high coiling body rises out of the sea and says in a low haunting voice
+	"MY NAME IS FLUFFY
+	HOW DARE YOU INVADE MY SEA OF JAPAN
+	KILL ME AND FACE YOUR FATE
+	YOU WILL NEVER GET THE SAPPHIRE I'M HOLDING
+	UNDER THE DEPTHS OF THE SEA
+	WAHHAHAHAHAHAHAHAHAHAHAHAHAH"
+valid_input: slay the dragon
+next_room: maze
+
+[maze]
+title: maze
+opening_message: As you slay the dragon, its mile-high body comes coiling back down
+	and sinks down to the bottom with a
+	deafening splash.
+	You see a glitter right next to your boat.
+	There is the sapphire floating down from the edge of your boat.
+	You decide to jump in and
+	retrieve the sapphire.
+	You are immediately transported to a mysterious maze...
+	The maze has old stone walls which are rotting with decay.
+	Vines are crawling up the rotting walls.
+	Go through the maze or run back to your momma!
+valid_input: go through the maze
+next_room: doors
+
+[doors]
+title:doors
+opening_message: You see 3 oaken doors with engravings of people getting killed.
+	The doors are fifteen feet high and to your 
+	right there is a small table with three keys on it:
+	silver, gold, and bronze
+	You take the bronze key - which door do you open?
+valid_input: open the middle door
+next_room: treasure
+
+[treasure]
+title:treasure
+opening_message: You see a wooden pedastal.
+	There is a wooden sword on top of it.
+	When you touch it, it turns into iron.
+	You combine the powers of the sapphire and the sword
+	and it magically transports you
+	to the phoenix.
+	You see two mile-high iron bars which
+	are connected to chains that restrain the golden phoenix from eating you.
+	You are in a field of vines which if you step outside
+	of a straight line you will fall into
+	a pool of lemonade that is poisonous
+	and which sharks and marshmallows are swimming in.
+valid_input: walk in a straight line
+next_room: phoenix
+
+[phoenix]
+title:phoenix
+opening_message: When you point your sword at the phoenix, it
+	magically turns into a wand. You curse it to never be
+	ferocious again and it turns into a giant butterfly.
+	It carries you to the emperor of North Korea and it
+	leaves you on the jade- and sapphire-colored stairs
+	to the huge golden doors of the magnificent Emperor's
+	house.
+valid_input: open the door
+next_room: emperor
+
+[emperor]
+title:emperor
+opening_message: You open the door and you find the emperor
+	walking back and forth very quickly on a marshmallow
+	mat. As you walk in, you see maginifcent fountains
+	that are floating in the air, spewing chocolate milk.
+	The emperor is wearing a magnifcent habok with jewel-encrusted
+	sleeves. He has 45-inch-long black fingernails. He smells
+	of ammonia. When his face turns towards you, you see that he
+	is nothing but a snake who transformed into a human to
+	trick his former captors, the Koreans.
+valid_input: walk up to him
+next_room: emperor2
+
+[emperor2]
+title:emperor2
+opening_message: You ask him why he has been holding these innocent Koreans
+	in their land, not allowed to leave. He responds, hissing
+
+	"Well, thisss isss only my REVENGE, puny human!! The Koreanssss usssed
+	to think sssnakessss were evil and bit children. In actuality, all of
+	the poissson sssnakesss were driven out by Emperor Timer V. Actually,
+	usss sssnakess are really garden ssnakessss. We love eating ratsss
+	that eat farmer'ssss cropssss. Sssso, you ssseee that we are not
+	really that bad and we love to eat bad ratssss.
+	
+	"But, your fate will come because I will grow fangssss if you stay
+	one moment longer."
+
+	You respond, saying
+
+	"I will stay however long you want. If you try to bite me,
+	the sapphire and sword that you have hidden are in my hands."
+
+	You take out the sword and the sapphire and the emperor gasps.
+	Right, that instant, the sword and sapphire magically 
+	turn into a wand which you use to cast a curse on him that his
+	descendants will turn into pigs at the age of 17.
+valid_input: slice off his head
+next_room: end
+
+[end]
+title:end
+opening_message: Thank you very much for playing.
+valid_input: end
+next_room: end

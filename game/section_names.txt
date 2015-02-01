@@ -1,0 +1,11 @@
+start
+dock
+ocean
+dragon
+maze
+doors
+treasure
+phoenix
+emperor
+emperor2
+end

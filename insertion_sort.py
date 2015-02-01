@@ -27,7 +27,7 @@ def insertion_sort(theList):
 		sortedList.insert(pos, element)
 	return sortedList
 
-myList = randomize_list(10)
+myList = randomize_list(100000)
 print myList
 myList = insertion_sort(myList)
 print myList
