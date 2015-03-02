@@ -1,8 +1,8 @@
 import sys, pygame
 pygame.init()
 
-size = width, height = # change the window size to 640x480
-speed = # change the x speed to 4 and the y speed to 3
+size = width, height =  640,480
+speed = [4,3]
 black = 0,0,0
 
 screen = pygame.display.set_mode(size)
@@ -17,10 +17,13 @@ while 1:
 	ballrect = ballrect.move(speed)
 	if ballrect.left < 0 or ballrect.right > width:
 		speed[0] = -speed[0]
-		# also increase the x speed every time it flips
+		if speed[0] < 0:
+			speed[0] = speed[0] - 2
+		else:
+			speed[0] = speed[0] + 2
 	if ballrect.top < 0 or ballrect.bottom > height:
 		speed[1] = -speed[1]
-		# also increase the y speed every time it flips
+		
 
 	screen.fill(black)
 	screen.blit(ball, ballrect)
