@@ -19,7 +19,8 @@ while 1:
 
 	# event queue
 	for event in pygame.event.get():
-		if event.type == pygame.QUIT: sys.exit()
+		if event.type == pygame.QUIT: 
+			sys.exit()
 
 		# user input
 		elif event.type == pygame.KEYDOWN:
@@ -31,8 +32,9 @@ while 1:
 				speed_move[0] = -5
 			elif event.key == pygame.K_UP:
 				speed_move[1] = -5
-			''' TODO: exit the game if the escape key is pressed '''
-			''' Note: may need to look online for what key escape is '''
+			elif event.key == pygame.K_ESCAPE:
+				sys.exit()
+
 		elif event.type == pygame.KEYUP:
 			if event.key == pygame.K_RIGHT or event.key == pygame.K_LEFT:
 				speed_move[0] = 0
@@ -70,10 +72,16 @@ while 1:
 
 
 	# drawing code
+	screen.fill(black)
+
 	''' TOOO: draw the user-controlled ball (ball_move) on top if '''
 	''' its moving right or down, and the bouncing ball on top if '''
 	''' ball_move is moving left or up. '''
-	screen.fill(black)
-	screen.blit(ball, ballrect)
-	screen.blit(ball_move, ballrect_move)
+	if speed_move[0] == 5 or speed_move[1] == 5:
+		screen.blit(ball, ballrect)
+		screen.blit(ball_move, ballrect_move)
+	else:
+		screen.blit(ball_move, ballrect_move)
+		screen.blit(ball, ballrect)
+	
 	pygame.display.flip()
