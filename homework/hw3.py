@@ -3,7 +3,9 @@ pygame.init()
 
 size = width, height = 640, 480
 speed = [4,3]
-# change speed limit to have separate x
+speed.y=4
+speed.x=3
+#  speed limit to have separate x
 # and y values, like speed
 speed_limit = 10 
 black = 0,0,0
@@ -20,7 +22,7 @@ while 1:
 	ballrect = ballrect.move(speed)
 	if ballrect.left < 0 or ballrect.right > width:
 		speed[0] = -speed[0]
-		# implement speed_limit's x component
+		speed.x = 3
 		if abs(speed[0]) < speed_limit: 
 			if speed[0] < 0:
 				speed[0] -= 1
@@ -28,9 +30,11 @@ while 1:
 				speed[0] += 1
 	if ballrect.top < 0 or ballrect.bottom > height:
 		speed[1] = -speed[1]
-		# implement speed_limit's y component
+		speed.y  = 4
+		if ball_move
 		if abs(speed[1]) < speed_limit:
 			if speed[1] > 0:
+
 				speed[1] += 1
 			else:
 				speed[1] -= 1
