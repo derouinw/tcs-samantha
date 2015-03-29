@@ -34,13 +34,19 @@ while 1:
 				speed_move[1] = -5
 			elif event.key == pygame.K_ESCAPE:
 				sys.exit()
+				elif event.key ==pygame.K_SPACEBAR
+					xspeed=3
+				elif event.key == pygame.K_backspace
+					yspeed=4
+					
+
 			''' TODO: if you press the space key then reverse the '''
 			''' x speed of the bouncing ball. '''
 			''' If you press the backspace key then reverse the '''
 			''' y speed of the bouncing ball. '''
 
 		elif event.type == pygame.KEYUP:
-			if event.key == pygame.K_RIGHT or event.key == pygame.K_LEFT:ne
+			if event.key == pygame.K_RIGHT or event.key == pygame.K_LEFT:
 				speed_move[0] = 0
 			elif event.key == pygame.K_DOWN or event.key == pygame.K_UP:
 				speed_move[1] = 0
@@ -85,3 +91,4 @@ while 1:
 		screen.blit(ball, ballrect)
 	
 	pygame.display.flip()
+	
