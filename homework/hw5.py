@@ -2,12 +2,32 @@ import sys, pygame
 
 # check collisions
 def check_x_collision(b1, b2):
-	''' TODO: complete checking left and right collisions. '''
-	return False
+	if (b2.left<b1.right and b2.left >b1.left) or (b2.right>b1.left and b2.right<b1.right):
+		return True
+	else: 
+		return False
 
 def check_y_collision(b1, b2):
-	''' TODO: complete checking top and bottom collisions. '''
-	return False
+	if (b2.top>b1.top and b2.top< b1.bottom) or (b2.bottom<b1.bottom and b2.bottom >b1.top):
+		return True
+	else:
+		return False
+
+def is_collision(b1, b2):
+	return check_x_collision(b1, b2) and check_y_collision(b1, b2)
+
+def left_collision(b1, b2, b2_old):
+	return b2_old.right < b1.left and b2.right >= b1.left
+
+def right_collision(b1, b2, b2_old):
+	return b2_old.left>b1.right and b2.left<=b1.right
+
+def bottom_collision(b1, b2, b2_old):
+	return b2_old.top>b1.bottom and b2.top<= b1.bottom
+
+def top_collision(b1, b2, b2_old):
+	return b2_old.bottom< b1.top and b2.bottom>= b1.top
+
 
 # init
 pygame.init()
@@ -68,17 +88,27 @@ while 1:
 
 	ballrect_move = ballrect_move.move(speed_move)
 
+	# check collision side
+	if is_collision(ballrect_move, ballrect):
+		x_collision = left_collision(ballrect_move, ballrect, ballrect_old) or right_collision(ballrect_move, ballrect, ballrect_old)
+		y_collision = bottom_collision(ballrect_move, ballrect, ballrect_old) or top_collision(ballrect_move, ballrect, ballrect_old)
+	else:
+		x_collision = y_collision = False
+
 	# bouncing ball
+	ballrect_old = ballrect
 	ballrect = ballrect.move(speed)
-	if ballrect.left < 0 or ballrect.right > width or check_x_collision(ballrect_move, ballrect):
+	if ballrect.left < 0 or ballrect.right > width or x_collision:
 		speed[0] = -speed[0]
+		ballrect = ballrect.move(speed[0], 0)
 		if abs(speed[0]) < speed_limit: 
 			if speed[0] < 0:
 				speed[0] -= 1
 			else:
 				speed[0] += 1
-	if ballrect.top < 0 or ballrect.bottom > height or check_y_collision(ballrect_move, ballrect):
+	if ballrect.top < 0 or ballrect.bottom > height or y_collision:
 		speed[1] = -speed[1]
+		ballrect = ballrect.move(0, speed[1])
 		if abs(speed[1]) < speed_limit:
 			if speed[1] > 0:
 				speed[1] += 1
@@ -96,4 +126,5 @@ while 1:
 		screen.blit(ball, ballrect)
 	
 	pygame.display.flip()
+	
 	

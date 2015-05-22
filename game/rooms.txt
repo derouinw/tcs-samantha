@@ -15,12 +15,14 @@ opening_message: Hello, welcome to Will you or will you not conquer the emperor!
 	and cherry blossoms.
 valid_input: run to the dock
 next_room: dock
+image: start.png
 
 [dock]
 title: dock
 opening_message: You see a one-person boat floating in the water.
 valid_input: sail into the middle of the ocean
 next_room: ocean
+image:dock.png
 
 [ocean]
 title: ocean
@@ -28,6 +30,7 @@ opening_message: You see telltale lines of a serpent's fins.
 	Your teeth chatter uncontrollably from fear.
 valid_input: investigate
 next_room: dragon
+image:ocean.png
 
 [dragon]
 title: dragon
@@ -41,6 +44,7 @@ opening_message: As you come closer the dragon senses you are near.
 	WAHHAHAHAHAHAHAHAHAHAHAHAHAH"
 valid_input: slay the dragon
 next_room: maze
+image:dragon.png
 
 [maze]
 title: maze
@@ -57,6 +61,7 @@ opening_message: As you slay the dragon, its mile-high body comes coiling back d
 	Go through the maze or run back to your momma!
 valid_input: go through the maze
 next_room: doors
+image:maze.png
 
 [doors]
 title:doors
@@ -67,6 +72,7 @@ opening_message: You see 3 oaken doors with engravings of people getting killed.
 	You take the bronze key - which door do you open?
 valid_input: open the middle door
 next_room: treasure
+image:doors.png
 
 [treasure]
 title:treasure
@@ -84,6 +90,7 @@ opening_message: You see a wooden pedastal.
 	and which sharks and marshmallows are swimming in.
 valid_input: walk in a straight line
 next_room: phoenix
+image:treasure.png
 
 [phoenix]
 title:phoenix
@@ -96,6 +103,7 @@ opening_message: When you point your sword at the phoenix, it
 	house.
 valid_input: open the door
 next_room: emperor
+image:phoenix.png
 
 [emperor]
 title:emperor
@@ -110,6 +118,7 @@ opening_message: You open the door and you find the emperor
 	trick his former captors, the Koreans.
 valid_input: walk up to him
 next_room: emperor2
+image:emperor.png
 
 [emperor2]
 title:emperor2
@@ -137,9 +146,12 @@ opening_message: You ask him why he has been holding these innocent Koreans
 	descendants will turn into pigs at the age of 17.
 valid_input: slice off his head
 next_room: end
+image:emperor2.png
 
 [end]
 title:end
 opening_message: Thank you very much for playing.
 valid_input: end
 next_room: end
+image:end.png
+
